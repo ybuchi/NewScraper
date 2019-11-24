@@ -1,0 +1,24 @@
+{
+  "name": "NewScraper",
+  "version": "1.0.0",
+  "description": "Read the news and leave your comments!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ybuchi/NewScraper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ybuchi/NewScraper/issues"
+  },
+  "homepage": "https://github.com/ybuchi/NewScraper#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
