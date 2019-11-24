@@ -2,6 +2,7 @@
 var express = require("express");
 var expressHandlebars = require("express-handlebars");
 var bodyParser = require("body-parser");
+var mongoose = require("mongoose");
 
 
 //Set up the port to be either host's deisgnated port or port 3000
@@ -28,6 +29,17 @@ app.use(bodyParser.urlencoded({
 
 //Every request will go through to the router
 app.use(router);
+
+//Connect Mongoose to database
+var db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+mongoose.connect(db, function(error){
+  if (error){
+    console.log(error);
+  }else{
+    console.log("Mongoose connection is successful");
+  }
+
+});
 
 //Listen to the port
 app.listen(PORT, function(){
