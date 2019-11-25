@@ -5,7 +5,7 @@ module.exports = function(router){
     });
 
     //The route that will bring us to the saved handlebars page
-    router.get("/saved", function(res,req){
+    router.get("/saved", function(req,res){
         res.render("saved");
     });
-}
+};
