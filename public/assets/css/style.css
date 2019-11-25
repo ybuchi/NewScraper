@@ -1,3 +1,14 @@
+.navbar{
+    background: black;
+}
 #title-jumbotron{
-    background: blue;
+    background-image: url("../images/NewspaperBG.jpg");
+    font-family: 'Audiowide', cursive;
+    color: white;
+    text-shadow: 2px 2px black;
 };
+
+#trelavy{
+    color: blue;
+}
+

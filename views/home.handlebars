@@ -1,25 +1,34 @@
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/">NewScrape</a>
-        </div>
-        {{!-- Navbar links --}}
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/saved">Saved Articles</a></li>
-            <li><a class="btn btn-danger scrape-new">Scrape New Articles!</a></li>
-        </ul>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">NewScraper</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active mx-3 my-auto">
+        <a href="/">Home</a>
+      </li>
+      <li class="nav-item mx-3 my-auto">
+        <a href="/saved">Saved Articles</a>
+      </li>
+      <li class="nav-item dropdown mx-3 my-auto">
+        <a class="btn btn-danger scrape-new">Scrape New Articles!</a>
+      </li>
+    </ul>
+  </div>
 </nav>
+
 {{!-- End of Navbar --}}
 
 <div class="jumbotron text-center" id="title-jumbotron">
-    <div class="caption" id="title-caption">
-        <h1>NewScrape</h1>
-        <p>Le Figaro Edition</p>
+    <div class="caption">
+        <h1 id="trelavy">Power to the Scraper</h1>
+        <p id="subtitle-text">Le Figaro Edition</p>
     </div>
     <div class="container-fluid article-container">
     </div>
+</div>
 
 {{!-- Footer --}}
     <footer class="footer">
@@ -29,9 +38,6 @@
     </footer>
 
 
-</div>
-
 {{!-- JQuery CDN + OUr own javascript file --}}
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="../../assets/javascript/index.js"></script>
