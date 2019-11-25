@@ -1,1 +1,37 @@
-<h1>Welcom to NewScraper</h1>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">NewScrape</a>
+        </div>
+        {{!-- Navbar links --}}
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/saved">Saved Articles</a></li>
+            <li><a class="btn btn-danger scrape-new">Scrape New Articles!</a></li>
+        </ul>
+    </div>
+</nav>
+{{!-- End of Navbar --}}
+
+<div class="jumbotron text-center">
+    <div class="overlay">
+    </div>
+    <div class="background-image">
+    </div>
+    <div class="caption">
+        <h1>NewScrape</h1>
+        <p>Le Figaro Edition</p>
+    </div>
+    <div class="container-fluid article-container">
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>NewScrape</p>
+        </div>
+    </footer>
+</div>
+
+{{!-- JQuery CDN --}}
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+<script src="../public/assets/javascript/index.js"></script>
