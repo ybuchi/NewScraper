@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 
     var articleContainer = $(".article-container");
@@ -7,11 +6,12 @@ $(document).ready(function(){
 
     initPage();
 
+//Initialize Page
     function initPage(){
         //empty the article container
         articleContainer.empty();
         //AJAX call
-        $.get("api/headlines?saved=false")
+        $.get("/api/headlines?saved=false")
         .then(function(data){
             if (data && data.length){
                 renderArticles(data);
@@ -23,6 +23,7 @@ $(document).ready(function(){
         });
     }
 
+//Render Articles
     function renderArticles(articles) {
         var articlePanels = [];
         for (var i = 0; i < articles.length; i++) {
@@ -53,6 +54,7 @@ $(document).ready(function(){
 
     }
 
+//Render Empty 
     function renderEmpty() {
         var emptyAlert = 
             $(["<div class='alert alert-warning text-center>",
@@ -72,6 +74,7 @@ $(document).ready(function(){
         articleContainer.append(emptyAlert);
     }
 
+//Article Save
     function handleArticleSave() {
         articleToSave.saved = true;
 
@@ -90,6 +93,7 @@ $(document).ready(function(){
         });
     }
 
+//Article Scrape
     function handleArticleScrape() {
         $.get("/api/fetch")
             .then(function(data){
