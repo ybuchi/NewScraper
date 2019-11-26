@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var schema = mongoose.Schema;
+var Schema = mongoose.Schema;
 
 var headlineSchema = new Schema ({
     headline: {
@@ -20,4 +20,4 @@ var headlineSchema = new Schema ({
 });
 
 var Headline = mongoose.model("Headline", headlineSchema);
-model.exports = Headline;
+module.exports = Headline;

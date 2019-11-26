@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var schema = mongoose.Schema;
+var Schema = mongoose.Schema;
 
 var NoteSchema = new Schema ({
     _headlineId: {
@@ -13,5 +13,5 @@ var NoteSchema = new Schema ({
     
 });
 
-var Note = mongoose.model("Note", noteSchema);
-model.exports = Note;
+var Note = mongoose.model("Note", NoteSchema);
+module.exports = Note;
