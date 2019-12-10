@@ -15,7 +15,7 @@ module.exports = function(router){
     });
 
 
-    router.get("api/fetch", function(req,res){
+    router.get("/api/fetch", function(req,res){
         headlinesController.fetch(function(err, docs){
             if(!docs||docs.insertedCount === 0){
                 res.json({
@@ -39,6 +39,7 @@ module.exports = function(router){
             res.json(data);
         });
     });
+    
     router.delete("/api/headlines/:id", function(req,res){
         var query = {};
         query._id = req.params.id;

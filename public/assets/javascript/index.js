@@ -35,7 +35,7 @@ $(document).ready(function(){
     function createPanel(article) {
         var panel = 
             $(["<div class='panel panel-default'>",
-            "div class='panel-heading'>",
+            "<div class='panel-heading'>",
             "<h3>",
             article.headline,
             "<a class='btn btn-success save'>",
@@ -61,10 +61,10 @@ $(document).ready(function(){
             "<h4>Uh Oh. Looks like we don't have any new articles.</h4>",
             "</div>",
             "<div class='panel panel-default>",
-            "<div class='panel-heading text-center",
+            "<div class='panel-heading text-center'>",
             "<h3>What Would You Like To Do ?</h3>",
             "</div>",
-            "<div class='panel-body text-center",
+            "<div class='panel-body text-center'>",
             "<h4><a class='scrape-new'>Try Scraping New Articles</a></h4>",
             "<h4><a href='/saved'>Go To Saved Articles</a></h4>",
             "</div>",
@@ -76,6 +76,8 @@ $(document).ready(function(){
 
 //Article Save
     function handleArticleSave() {
+        console.log("starting the process of saving the article");
+        var articleToSave = $(this).parents(".panel").data();
         articleToSave.saved = true;
 
         //make an AJAX call
@@ -87,6 +89,7 @@ $(document).ready(function(){
         .then(function(data){
             //Mongoose sends a key of "ok"
             if (data.ok) {
+                console.log("About to init page")
                 initPage();
 
             }
